@@ -8,3 +8,7 @@ resource "aws_instance" "name" {
     Name = "MyInstance_17-sep"
   }
 }
+resource "aws_s3_bucket" "name" {
+    bucket = "bucketthanksyouterraform" 
+  
+}
