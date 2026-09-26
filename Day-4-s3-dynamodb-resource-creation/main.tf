@@ -4,6 +4,12 @@ provider "aws" {
 resource "aws_s3_bucket" "example" {
   bucket = "thisbucketosforterraformstatelock"
 }
+resource "aws_s3_bucket_versioning" "name" {
+  bucket = aws_s3_bucket.example.id
+  versioning_configuration {
+    status = "Enabled"
+  }
+}
 
 resource "aws_dynamodb_table" "dynamodb-terraform-state-lock" {
   name           = "terraform-state-lock-dynamo"
