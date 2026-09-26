@@ -2,7 +2,7 @@ resource "aws_vpc" "vpc_1" {
   cidr_block = "10.0.0.0/16"
 
   tags = {
-    Name = "VPC_1"
+    Name = "VPC_1_11am"
   }
 }
 
